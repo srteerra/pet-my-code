@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pet My Code</title>
+    <style>
+      /* define the style of the moving div */
+      #moving-div {
+        position: absolute;
+        left: 0;
+        top: 50px;
+        width: 50px;
+        height: 50px;
+        background-color: blue;
+        animation-name: move-right;
+        animation-duration: 2s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+      }
+
+      /* define the animation to move the div from left to right */
+      @keyframes move-right {
+        0% {
+          left: 0;
+        }
+        100% {
+          left: calc(100% - 50px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="hello()">Hello</button>
+    <div id="moving-div"></div>
+    <script>
+      let div = document.getElementById("moving-div");
+      div.style.backgroundColor = "blue";
+
+      function hello() {
+        div.style.backgroundColor = "yellow";
+      }
+    </script>
+  </body>
+</html>
